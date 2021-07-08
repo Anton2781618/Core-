@@ -39,11 +39,12 @@ public class Core
     public Dictionary<string, int> nomenklatura = new Dictionary<string, int>();
 
     //список маршрутных листов
-    public List<Transform> routeList = new List<Transform>();
+    public List<Transform> routeListPrefabs = new List<Transform>();
 
     //список водителей
     public List<string> driverList = new List<string>();
 
+    //тип данных статистики внутри хранится вся информация о дне
     public Statistics statistics;
 
 }
