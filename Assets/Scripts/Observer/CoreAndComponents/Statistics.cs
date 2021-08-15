@@ -13,4 +13,9 @@ public class Statistics : IComponentsCore
     int profit;
     //словарь зарплат сотрудников        
     Dictionary<string, int> peoplesSalaries = new Dictionary<string, int>();
+    
+    public void Show_data()
+    {
+        throw new NotImplementedException();
+    }
 }

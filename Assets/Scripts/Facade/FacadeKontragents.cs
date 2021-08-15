@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IComponentsCore 
+public class FacadeKontragents 
 {
+   public Invoker invoker = new Invoker();
+
 }
