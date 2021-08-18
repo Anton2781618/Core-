@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using System;
 
-public class Invoker
+public class Invoker 
 {
     public Dictionary<string, IComandKontragents> comandsKontragents = new Dictionary<string, IComandKontragents>();
 

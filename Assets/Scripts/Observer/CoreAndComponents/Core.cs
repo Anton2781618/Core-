@@ -6,7 +6,7 @@ using System.Linq;
 
 //Общее хранилище данных. 
 [Serializable]
-public class Core : MonoBehaviour
+public class Core 
 {
     public Dictionary<string, IComponentsCore> dict = new Dictionary<string, IComponentsCore>();
 

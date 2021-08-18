@@ -7,10 +7,16 @@ using System;
 [Serializable]
 public class Kontragent : IComponentsCore
 {
-    public class Client
+    public class Client : MonoBehaviour
 	{
+        public Client(GameObject myTrans)
+        {
+            this.myTrans = myTrans;
+        }
+
+        public GameObject myTrans;
         public string Adress { get; set; }
-        public string name { get; set; }
+        public string Name { get; set; }
         public string Telephone { get; set; }
 	}
 
@@ -23,6 +29,7 @@ public class Kontragent : IComponentsCore
 	// метод просто для проверки 
 	public void Show_data()
     {
-		Debug.Log("Контрагентов " + kontragents.Count + " шт");
+		// Debug.Log("Контрагентов " + kontragents.Count + " шт" + " Id " + kontragents[kontragents.Count].Id);
+       
     }
 }

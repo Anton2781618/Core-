@@ -1,16 +1,27 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class AddNewKontragentCommand : MonoBehaviour, IComandKontragents 
+public class AddNewKontragentCommand : MonoBehaviour, IComandKontragents
 {
-    Kontragent access = Core.Singleton.dict["Kontragent"] as Kontragent;
-    
-    public void Execute()
-    {
-        access.kontragents.Add(new Kontragent.Client());
+    protected Kontragent access = Core.Singleton.dict["Kontragent"] as Kontragent;
 
+    public void Execute(int id)
+    {
+        Add_new_Kontragent();
+        access.Show_data();
+    }
+
+    void Add_new_Kontragent()
+    {
+        
         GameObject Bufer = Instantiate(GameObject.Find("ObjectKontragent"));
+
         Bufer.transform.SetParent(GameObject.Find("ContantKontragents").transform);
         Bufer.transform.localScale = new Vector3(1, 1, 1);
-        access.Show_data();
+
+        Bufer.transform.GetChild(0).GetComponent<Text>().text = access.kontragents.Count.ToString();
+        access.kontragents.Add(new Kontragent.Client(Bufer));
+
+        
     }
 }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IComandKontragents 
 {
-    void Execute();
+    void Execute(int id = 0);
 }

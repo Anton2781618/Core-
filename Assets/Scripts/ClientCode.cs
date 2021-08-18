@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 // точка входа, класс управления программой.  
 // так же тут место для хранения префабов
@@ -15,8 +17,13 @@ public class ClientCode : MonoBehaviour
         facadeKontragents.invoker.comandsKontragents["AddNewKontragentCommand"].Execute();
     }
 
-    public void Delete_Kontragent()
+    public void Delete_Kontragent(Text id)
     {
-        facadeKontragents.invoker.comandsKontragents["DeleteKontragentCommand"].Execute();
+        facadeKontragents.invoker.comandsKontragents["DeleteKontragentCommand"].Execute(int.Parse(id.text));
+    }
+
+    public void Open_card_Kontragent(Text id)
+    {
+        facadeKontragents.invoker.comandsKontragents["OpenKontragentCommand"].Execute(int.Parse(id.text));
     }
 }
